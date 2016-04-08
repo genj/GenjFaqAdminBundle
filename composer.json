@@ -27,7 +27,7 @@
         "doctrine/orm": "~2.2,>=2.2.3",
         "doctrine/doctrine-bundle": "~1.2",
         "doctrine/doctrine-fixtures-bundle": "~2.2",
-        "genj/faq-bundle": "~1.0"
+        "genj/faq-bundle": "dev-master"
     },
 
     "minimum-stability": "dev",
