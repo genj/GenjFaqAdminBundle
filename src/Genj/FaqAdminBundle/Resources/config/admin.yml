@@ -2,10 +2,19 @@ parameters:
     genj_faq.admin.question_admin.class: Genj\FaqAdminBundle\Admin\QuestionAdmin
 
 services:
+    sonata.admin.genj_faq_category:
+        class: %genj_faq.admin.category_admin.class%
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Content", label: "FAQ Category" }
+        arguments:
+            - ~
+            - %genj_faq.entity.category.class%
+            - ~
+
     sonata.admin.genj_faq_question:
         class: %genj_faq.admin.question_admin.class%
         tags:
-            - { name: sonata.admin, manager_type: orm, group: "Content", label: "FAQ" }
+            - { name: sonata.admin, manager_type: orm, group: "Content", label: "FAQ question" }
         arguments:
             - ~
             - %genj_faq.entity.question.class%
