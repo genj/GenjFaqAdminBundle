@@ -1,4 +1,5 @@
 parameters:
+    genj_faq.admin.category_admin.class: Genj\FaqAdminBundle\Admin\CategoryAdmin
     genj_faq.admin.question_admin.class: Genj\FaqAdminBundle\Admin\QuestionAdmin
 
 services:
@@ -14,7 +15,7 @@ services:
     sonata.admin.genj_faq_question:
         class: %genj_faq.admin.question_admin.class%
         tags:
-            - { name: sonata.admin, manager_type: orm, group: "Content", label: "FAQ question" }
+            - { name: sonata.admin, manager_type: orm, group: "Content", label: "FAQ Question" }
         arguments:
             - ~
             - %genj_faq.entity.question.class%
